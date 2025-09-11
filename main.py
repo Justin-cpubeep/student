@@ -4,6 +4,7 @@ students=[
     {"id":2,"name":"맹구","korean":80,"english":80,"math":80}
 ]
 accumulatedID=3
+page=-1
 order=input(
     """
     C: 학생 추가,
