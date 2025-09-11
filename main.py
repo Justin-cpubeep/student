@@ -33,7 +33,7 @@ while True:
         if page==-1:
             page=0
         stdlist.append(student)
-        print(stdlist)
+        # print(stdlist)
     elif order=="D":
         print("학생을 삭제합니다.")
     elif order=="V":
