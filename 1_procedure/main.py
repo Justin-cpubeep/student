@@ -34,8 +34,22 @@ while True:
             page=0
         stdlist.append(student)
         print(stdlist)
+        
     elif order=="D":
         print("학생을 삭제합니다.")
+        target_id = input('삭제하려는 고객의 ID를 입력하세요 >>> ').strip()
+        delok = 0
+        for idx, student in enumerate(stdlist):
+            if student['id'] == target_id:
+                data = stdlist.pop(idx)
+                print('{}님의 정보가 삭제되었습니다.'.format(data['id']))
+                delok=1
+                break
+        if delok == 0:
+            print('등록되지 않은 이메일입니다.')
+        print(stdlist)
+        page = len(stdlist)-1
+
     elif order=="V":
         print("학생을 조회합니다.")
 
@@ -116,6 +130,26 @@ while True:
             
     elif order=="I":
         print("학생 성적을 입력합니다.")
+        target_id = input("성적을 입력할 학생 ID를 입력하세요 >>> ")
+        found = False
+        for student in stdlist:
+            if student["id"] == target_id:
+                found = True
+                try:
+                    student["korean"] = int(input("국어 성적 입력 >>> "))
+                    student["english"] = int(input("영어 성적 입력 >>> "))
+                    student["math"] = int(input("수학 성적 입력 >>> "))
+                    print("성적 입력 완료:", student)
+                except ValueError:
+                    print("성적은 숫자로 입력해야 합니다.")
+                break
+        if not found:
+            print("해당 ID의 학생을 찾을 수 없습니다.")
+        print(student)
+        stdlist.append(student)
+        print(stdlist)
+        page = len(stdlist)-1
+
     elif order=="M":
         print("학생 성적을 수정합니다.")
         while True:

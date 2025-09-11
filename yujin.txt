@@ -1,0 +1,7 @@
+stdlist=[{'id': '202501', 'name': 'kim', 'korean': 95, 'english': 80, 'math': 85},
+{'id': '202502', 'name': 'park', 'korean': 75, 'english':89 , 'math': 20},
+{'id': '202503', 'name': 'lee', 'korean': 100, 'english': 60, 'math': 40}
+{'id': '202504', 'name': 'hong', 'korean': 55, 'english': 63, 'math': 92}
+{'id': '202505', 'name': 'jo', 'korean': 99, 'english': 98, 'math': 100}
+{'id': '202506', 'name': 'jeong', 'korean': 21, 'english': 34, 'math': 11}
+{'id': '202507', 'name': 'choi', 'korean': 43, 'english': 56, 'math': 39}]
