@@ -30,6 +30,30 @@ while True:
         print("학생 성적을 입력합니다.")
     elif order=="M":
         print("학생 성적을 수정합니다.")
+        while True:
+            choice1=input('수정하시려는 학생의 ID를 입력하세요 : ') # ID 존재 여부 체크 필요
+            idx=-1
+            for i in range(0,len(stdlist)):
+                if stdlist[i]['id'] == choice1:
+                    idx=i
+            if idx==-1:
+                print('등록되지 않은 학생의 ID입니다.')       
+                break
+                        
+            choice2=input('''
+            다음 중 수정하실 정보를 골라주세요 .
+                    name, korean, english, math
+            (수정할 정보가 없으면 'exit' 입력)
+            ''')
+            if choice2 in ('name','korean','english','math'):
+                stdlist[idx][choice2]=input('수정할 {}을 입력하세요 :'.format(choice2))
+                break
+            elif choice2 =='exit':
+                break
+            else:
+                print('존재하지 않는 정보입니다.')
+                break
+
     elif order=="Q":
         print("작업을 종료합니다.")
         break
