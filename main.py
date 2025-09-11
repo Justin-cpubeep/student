@@ -1,3 +1,9 @@
+students=[
+    {"id":0,"name":"영희","korean":100,"english":50,"math":0},
+    {"id":1,"name":"철수","korean":0,"english":50,"math":100},
+    {"id":2,"name":"맹구","korean":80,"english":80,"math":80}
+]
+accumulatedID=3
 order=input(
     """
     C: 학생 추가,
